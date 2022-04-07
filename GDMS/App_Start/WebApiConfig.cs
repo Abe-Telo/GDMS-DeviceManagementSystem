@@ -9,9 +9,9 @@ namespace GDMS
     {
         public static void Register(HttpConfiguration config)
         {
-            // Web API 配置和服务
+            // Web API configuration and service
 
-            // Web API 路由
+            // Web API routing
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
