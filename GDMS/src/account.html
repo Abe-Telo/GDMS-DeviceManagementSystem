@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>设备管理系统 - GDMS</title>
+  <title>equipment management system - GDMS</title>
   <meta http-equiv="content-type" content="text/html" charset="UTF-8">
   <script type="text/javascript" src="src/js/jquery-1.12.0.min.js"></script>
 	<script type="text/javascript" src="src/js/layui/layui.js"></script>
@@ -12,19 +12,19 @@
 <body>
 
 <div class="info" style="display:none;">
-  <span>提示：XXX</span>
+  <span>hint：XXX</span>
 </div>
 
 <div class="wrap">
   <div class="subwrap">
     <div class="content">  
       <div class="layui-row">
-        <div class="title"><span lang="设备管理系统">设备管理系统</span></div>
+        <div class="title"><span lang="equipment management system">equipment management system</span></div>
         <div class="title2">Global Device Management System</div>
         <div class="switch-wrap">
           <div class="switch-button-wrap">
-            <span class="switch-button" id="signup"><span lang="注册">注册</span></span>
-            <span class="switch-button active" id="signin"><span lang="登录">登录</span></span>
+            <span class="switch-button" id="signup"><span lang="register">register</span></span>
+            <span class="switch-button active" id="signin"><span lang="Log in">Log in</span></span>
             <span class="switch-button-bottom"></span>
           </div>
         </div>
@@ -32,28 +32,28 @@
       <div class="layui-row tab-signin">
         <div class="group-inputs">
           <div class="account input-wrapper">
-            <input name="username" placeholder="账号" type="text" class="input-top">
+            <input name="username" placeholder="account" type="text" class="input-top">
           </div>
           <div class="verification input-wrapper">
-            <input name="password" placeholder="密码" type="password" class="input-bottom">
+            <input name="password" placeholder="password" type="password" class="input-bottom">
           </div>
         </div>
-        <div class="signin-button"><span lang="登录">登录</span></div>
+        <div class="signin-button"><span lang="Log in">Log in</span></div>
       </div>
       
       <div class="layui-row tab-signup">
         <div class="group-inputs">
           <div class="account input-wrapper">
-            <input name="username" placeholder="账号" type="text" class="input-top">
+            <input name="username" placeholder="account" type="text" class="input-top">
           </div>
           <div class="verification input-wrapper">
-            <input name="password" placeholder="密码" type="password">
+            <input name="password" placeholder="password" type="password">
           </div>
           <div class="verification input-wrapper">
-            <input name="password2" placeholder="确认密码 CONFIRM PASS" type="password" class="input-bottom">
+            <input name="password2" placeholder="confirm password CONFIRM PASS" type="password" class="input-bottom">
           </div>
         </div>
-        <div class="signup-button"><span lang="暂未开放">暂未开放</span></div>
+        <div class="signup-button"><span lang="Not yet open">Not yet open</span></div>
       </div>
       
       
@@ -81,7 +81,7 @@
 </body>
 </html>
 <script type="text/javascript">
-//初始化语言
+//initialize language
 localStorage.lang = 'CN';
 
 layui.use('form', function(){
@@ -103,9 +103,9 @@ layui.use('form', function(){
         for(var i in res.data){
           $('span[lang="'+i+'"]').html(res.data[i]);
         }
-        $('input[name="username"]').attr('placeholder',res.data['账号']) ;
-        $('input[name="password"]').attr('placeholder',res.data['密码']) ;
-        $('input[name="password2"]').attr('placeholder',res.data['确认密码']) ;
+        $('input[name="username"]').attr('placeholder',res.data['account']) ;
+        $('input[name="password"]').attr('placeholder',res.data['password']) ;
+        $('input[name="password2"]').attr('placeholder',res.data['confirm password']) ;
        
       },
       error:function (e) {
@@ -113,7 +113,7 @@ layui.use('form', function(){
         if(e.status){errMsg = errMsg +'(' + e.status + ')';}
         layer.msg(errMsg, {
           icon: 3,
-          time: 1500 //1.5秒关闭
+          time: 1500 //1.5seconds off
         }, function(){
           $('input[name="username"]').val('');
           $('input[name="password"]').val('');
@@ -127,28 +127,28 @@ layui.use('form', function(){
   form.render();
 });
 
-//全局回车事件
+//Global carriage return event
 $(function(){
 	document.onkeydown = function(e){
 		password = $('#password').val();
-		//判断按回车且密码输入框有值时才触发登录事件。
+//The login event is only triggered when you press Enter and the password input box has a value.
 		if(e.keyCode==13&password!=""){
 			login();
 		}
 	}
 });   
 
-//登录按钮点击事件
+//Login button click event
 $('.signin-button').click(function(){
   login();
 });
 
-//输入框点击事件
+//input box click event
 $('.group-inputs input').click(function(){
   $(this).css('background-color','#fff');
 });
 
-//登录函数
+//login function
 function login(){
   lang = $('select[name="lang"]').val();
   username = $('input[name="username"]').val();
@@ -194,7 +194,7 @@ function login(){
       error:function (e) {
         layer.msg(e.responseJSON.ExceptionMessage, {
           icon: 3,
-          time: 1500 //1.5秒关闭
+          time: 1500 //1.5 seconds off
         }, function(){
           $('input[name="username"]').val('');
           $('input[name="password"]').val('');
