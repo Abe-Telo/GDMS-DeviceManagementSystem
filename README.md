@@ -1,10 +1,10 @@
 # GDMS-DeviceManagementSystem
-声明：本人由于近期工作原因，暂时无暇推进此项目，此项目有长期搁置风险
+Statement: Due to my recent work, I have no time to advance this project, and this project has the risk of long-term shelving
 
-* 基于web的设备管理系统，1期开发中 (已完成73%)
-* 前后端完全分离，使用JWT管理session，后端通过C#的控制器提供接口
-* 数据库使用了Oracle
-* 如果您有什么建议，或是有意向合作，欢迎联系我。
+* Web-based equipment management system, Phase 1 under development (73% completed)
+* The front and back ends are completely separated, using JWT to manage sessions, and the back end provides interfaces through C# controllers
+* The database uses Oracle
+* If you have any suggestions, or are interested in cooperation, please contact me.
 
 |Author|Bing Zhe|
 |---|---
@@ -12,17 +12,16 @@
 |WeChat|wbz9061
 
 ****
-#### 项目特点
-* 通用性强，能够满足大多数行业的设备管理需要。
-* 界面优雅；原本计划使用layuiAdmin，奈何对于业余开发者来说授权太贵且不开源，于是使用layui改写样式，高仿layuiAdmin的UI，自己集成了一套前端框架，保证代码全部开源。
-* 部署简单，1期开发完成后会编写部署文档。
+#### Project Features
+* It has strong versatility and can meet the equipment management needs of most industries.
+* The interface is elegant; originally planned to use layuiAdmin, but it is too expensive for amateur developers and not open source, so use layui to rewrite the style, imitate the UI of layuiAdmin, and integrate a set of front-end framework to ensure that all the code is open source.
+* The deployment is simple, and the deployment document will be written after the first phase of development is completed.
 
-
-#### 控制台预览（持续改进，非最终版）
+#### Console preview (continuous improvement, not final)
 ![控制台预览](https://github.com/manier13579/GDMS-DeviceManagementSystem/raw/master/GDMS/src/images/demo3.png)  
 
-#### 内容页预览（持续改进，非最终版）
+#### Content page preview (continuous improvement, not final version)
 ![内容页预览](https://github.com/manier13579/GDMS-DeviceManagementSystem/raw/master/GDMS/src/images/demo2.png)  
 
-#### 登录页预览（持续改进，非最终版）
+#### Landing page preview (continuous improvement, not final)
 ![登录页预览](https://github.com/manier13579/GDMS-DeviceManagementSystem/raw/master/GDMS/src/images/demo1.png)  
